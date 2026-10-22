@@ -7,13 +7,14 @@ exclude = ["/test"]
 keywords = ["asynchronous", "net", "monero", "rpc"]
 license = "Apache-2.0"
 repository = "https://github.com/monero-rs/monero-rpc-rs"
-rust-version = "1.88.0"
+rust-version = "1.85.0"
 description = "RPC client for Monero daemon and wallet"
 
 [dependencies]
 anyhow = "1"
 chrono = { version = "0.4", default-features = false, features = ["serde"] }
-diqwest = { version = "3.2.0", default-features = false, optional = true }
+#diqwest = { version = "3.2.0", default-features = false, optional = true }
+diqwest = { git = "https://github.com/silverpill/diqwest", rev = "2be6719a87215f977f59bc3fed374ff0e1c6ef27", default-features = false, optional = true }
 fixed-hash = "0.8"
 hex = "0.4"
 jsonrpc-core = "18"
